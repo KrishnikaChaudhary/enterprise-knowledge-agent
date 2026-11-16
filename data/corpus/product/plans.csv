@@ -1,0 +1,4 @@
+plan,price_usd_per_month,api_requests_per_min,seats_included,uptime_sla
+Starter,49,120,5,99.5%
+Pro,299,600,25,99.9%
+Enterprise,1499,3000,100,99.95%

@@ -1,0 +1,22 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "${{ matrix.python }}" }
+      - run: pip install -e ".[dev]"
+      - run: python -m mypy kagent
+      - run: python -m pytest -q
+      - run: python -m kagent.evalrun --out /tmp/eval
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t knowledge-agent .
+      - run: docker run --rm -d --name ka -p 8080:8080 -e KB_HOST=0.0.0.0 -e K_SERVICE=ci knowledge-agent && sleep 4 && curl -fsS localhost:8080/readyz

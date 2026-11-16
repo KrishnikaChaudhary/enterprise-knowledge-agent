@@ -1,0 +1,140 @@
+{
+  "trace_id": "de36dd521e9443fca35f9acb5ffd6f16",
+  "name": "ask",
+  "summary": {
+    "trace_id": "de36dd521e9443fca35f9acb5ffd6f16",
+    "llm_calls": 3,
+    "tool_calls": 0,
+    "tool_cache_hits": 0,
+    "span_errors": 0,
+    "injection_lines_removed": 0,
+    "tokens_in": 700,
+    "tokens_out": 23,
+    "total_tokens": 723,
+    "cost_usd": 0.00130125,
+    "tokens_per_sec": 21.976112920738327,
+    "avg_ttft_s": 0.2333333333333333,
+    "latency_s": 1.0465909090909091,
+    "per_agent": {
+      "router": {
+        "calls": 1,
+        "tokens_in": 53,
+        "tokens_out": 3,
+        "cost_usd": 9.75e-06
+      },
+      "answer": {
+        "calls": 1,
+        "tokens_in": 329,
+        "tokens_out": 17,
+        "cost_usd": 0.001242
+      },
+      "verify": {
+        "calls": 1,
+        "tokens_in": 318,
+        "tokens_out": 3,
+        "cost_usd": 4.949999999999999e-05
+      }
+    }
+  },
+  "spans": [
+    {
+      "span_id": "63580e7d",
+      "parent_id": null,
+      "name": "request",
+      "kind": "request",
+      "attrs": {
+        "role": "employee"
+      },
+      "start": 1352.256913633,
+      "wall_s": 0.005247650000001158,
+      "latency_s": 0.0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "ttft_s": 0.0,
+      "cost_usd": 0.0,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "span_id": "88e762f6",
+      "parent_id": "63580e7d",
+      "name": "router",
+      "kind": "llm",
+      "attrs": {
+        "agent": "router",
+        "model": "small",
+        "resolved_model": "small"
+      },
+      "start": 1352.256939506,
+      "wall_s": 0.00022761600007470406,
+      "latency_s": 0.16874999999999998,
+      "tokens_in": 53,
+      "tokens_out": 3,
+      "ttft_s": 0.15,
+      "cost_usd": 9.75e-06,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "span_id": "c0ee4440",
+      "parent_id": "63580e7d",
+      "name": "retrieve",
+      "kind": "retrieve",
+      "attrs": {
+        "mode": "hybrid",
+        "k": 4,
+        "n_hits": 4,
+        "top_support": 0.762
+      },
+      "start": 1352.257181315,
+      "wall_s": 0.004159700999935012,
+      "latency_s": 0.0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "ttft_s": 0.0,
+      "cost_usd": 0.0,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "span_id": "386729be",
+      "parent_id": "63580e7d",
+      "name": "answer",
+      "kind": "llm",
+      "attrs": {
+        "agent": "answer",
+        "model": "large",
+        "resolved_model": "large"
+      },
+      "start": 1352.261480698,
+      "wall_s": 0.0004360670000096434,
+      "latency_s": 0.7090909090909091,
+      "tokens_in": 329,
+      "tokens_out": 17,
+      "ttft_s": 0.4,
+      "cost_usd": 0.001242,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "span_id": "23ff67df",
+      "parent_id": "63580e7d",
+      "name": "verify",
+      "kind": "llm",
+      "attrs": {
+        "agent": "verify",
+        "model": "small",
+        "resolved_model": "small"
+      },
+      "start": 1352.261938814,
+      "wall_s": 0.00016382100011469447,
+      "latency_s": 0.16874999999999998,
+      "tokens_in": 318,
+      "tokens_out": 3,
+      "ttft_s": 0.15,
+      "cost_usd": 4.949999999999999e-05,
+      "status": "ok",
+      "error": null
+    }
+  ]
+}

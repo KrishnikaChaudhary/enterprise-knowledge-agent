@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.env
+*.db
+*.db-wal
+*.db-shm
+*.pyc
+.venv/
+out.json
+results/traces_real/
+results/benchmark_real.*

@@ -1,0 +1,771 @@
+{
+  "summary": {
+    "vector_only": {
+      "n": 60,
+      "answer_accuracy": 0.729,
+      "hit@1": 0.917,
+      "hit@4": 0.958,
+      "mrr": 0.929,
+      "refusal_accuracy": 1.0,
+      "acl_blocked_ok": 1.0,
+      "acl_leaks": 0,
+      "injection_ok": 1.0,
+      "cited_rate": 1.0,
+      "tokens_in": 408.8,
+      "cost_per_request": 0.00078,
+      "latency_s": 0.82387,
+      "llm_calls": 2.62
+    },
+    "bm25_only": {
+      "n": 60,
+      "answer_accuracy": 0.75,
+      "hit@1": 0.938,
+      "hit@4": 0.958,
+      "mrr": 0.948,
+      "refusal_accuracy": 1.0,
+      "acl_blocked_ok": 1.0,
+      "acl_leaks": 0,
+      "injection_ok": 1.0,
+      "cited_rate": 1.0,
+      "tokens_in": 400.6,
+      "cost_per_request": 0.0008,
+      "latency_s": 0.83621,
+      "llm_calls": 2.57
+    },
+    "hybrid": {
+      "n": 60,
+      "answer_accuracy": 0.75,
+      "hit@1": 0.875,
+      "hit@4": 0.958,
+      "mrr": 0.917,
+      "refusal_accuracy": 1.0,
+      "acl_blocked_ok": 1.0,
+      "acl_leaks": 0,
+      "injection_ok": 1.0,
+      "cited_rate": 1.0,
+      "tokens_in": 210.6,
+      "cost_per_request": 0.00081,
+      "latency_s": 0.54152,
+      "llm_calls": 0.82
+    },
+    "hybrid+rewrite": {
+      "n": 60,
+      "answer_accuracy": 0.75,
+      "hit@1": 0.938,
+      "hit@4": 0.958,
+      "mrr": 0.948,
+      "refusal_accuracy": 1.0,
+      "acl_blocked_ok": 1.0,
+      "acl_leaks": 0,
+      "injection_ok": 1.0,
+      "cited_rate": 1.0,
+      "tokens_in": 218.8,
+      "cost_per_request": 0.00086,
+      "latency_s": 0.65424,
+      "llm_calls": 1.03
+    },
+    "hybrid+rewrite+verify": {
+      "n": 60,
+      "answer_accuracy": 0.75,
+      "hit@1": 0.938,
+      "hit@4": 0.958,
+      "mrr": 0.948,
+      "refusal_accuracy": 1.0,
+      "acl_blocked_ok": 1.0,
+      "acl_leaks": 0,
+      "injection_ok": 1.0,
+      "cited_rate": 1.0,
+      "tokens_in": 375.6,
+      "cost_per_request": 0.00135,
+      "latency_s": 0.94212,
+      "llm_calls": 1.67
+    },
+    "full (routing)": {
+      "n": 60,
+      "answer_accuracy": 0.75,
+      "hit@1": 0.938,
+      "hit@4": 0.958,
+      "mrr": 0.948,
+      "refusal_accuracy": 1.0,
+      "acl_blocked_ok": 1.0,
+      "acl_leaks": 0,
+      "injection_ok": 1.0,
+      "cited_rate": 1.0,
+      "tokens_in": 423.1,
+      "cost_per_request": 0.00084,
+      "latency_s": 0.846,
+      "llm_calls": 2.62
+    }
+  },
+  "failures": {
+    "vector_only": [
+      {
+        "id": "Q08",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": null,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q09",
+        "type": "answerable",
+        "status": "answered",
+        "reason": "",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q33",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q34",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q35",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q36",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q37",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q38",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": null,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q39",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 3,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q42",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 4,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q44",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q45",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q50",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      }
+    ],
+    "bm25_only": [
+      {
+        "id": "Q09",
+        "type": "answerable",
+        "status": "answered",
+        "reason": "",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q33",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q34",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q35",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q36",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q37",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q38",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": null,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q39",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 2,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q42",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": null,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q44",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q45",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q50",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      }
+    ],
+    "hybrid": [
+      {
+        "id": "Q09",
+        "type": "answerable",
+        "status": "answered",
+        "reason": "",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q33",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q34",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 2,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q35",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q36",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 2,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q37",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q38",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": null,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q39",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 2,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q42",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": null,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q44",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q45",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q50",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      }
+    ],
+    "hybrid+rewrite": [
+      {
+        "id": "Q09",
+        "type": "answerable",
+        "status": "answered",
+        "reason": "",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q33",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q34",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q35",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q36",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q37",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q38",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": null,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q39",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 2,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q42",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": null,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q44",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q45",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q50",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      }
+    ],
+    "hybrid+rewrite+verify": [
+      {
+        "id": "Q09",
+        "type": "answerable",
+        "status": "answered",
+        "reason": "",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q33",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q34",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q35",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q36",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q37",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q38",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": null,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q39",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 2,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q42",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": null,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q44",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q45",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q50",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      }
+    ],
+    "full (routing)": [
+      {
+        "id": "Q09",
+        "type": "answerable",
+        "status": "answered",
+        "reason": "",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q33",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q34",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q35",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q36",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q37",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q38",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": null,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q39",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 2,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q42",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": null,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q44",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q45",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "no_relevant_context",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      },
+      {
+        "id": "Q50",
+        "type": "answerable",
+        "status": "refused",
+        "reason": "model_not_found",
+        "first_gold_rank": 1,
+        "leak": false,
+        "correct": false
+      }
+    ]
+  }
+}
